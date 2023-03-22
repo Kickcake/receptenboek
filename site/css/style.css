@@ -8,10 +8,28 @@ th {
     border: 1px solid black;
 }
 
-.rtitle h1 {
-    text-align: center;
+.recepten a {
+    border: 1px solid black;
+    width: 600px;
+    display: flex;
+    flex-direction: row;
+}
+
+.rlevel {
+    position: relative;
+    top: 40px;
+    left: 5px;
+    align-content: center;
+}
+
+.rtitle {
+    position: relative;
+    right: 60px;
 }
 
 .rimg img {
     max-width: 200px;
+    position: relative;
+    right: 50px;
+    border: 1px solid black;
 }
