@@ -12,8 +12,50 @@ $recepten = $stmt->fetchAll();
 ?>
 
 <body>
-    <?php foreach ($recepten as $recept) { ?>
-        <p><?php echo $recept['name'] ?></p>
-    <?php } ?>
+    <table>
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>name</th>
+                <th>level</th>
+                <th>chef</th>
+                <th>taste</th>
+                <th>amount</th>
+                <th>time</th>
+                <th>preparation</th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php foreach ($recepten as $recept) { ?>
+                <tr>
+                    <td>
+                        <p><?php echo $recept['id'] ?></p>
+                    </td>
+                    <td>
+                        <p><?php echo $recept['name'] ?></p>
+                    </td>
+                    <td>
+                        <p><?php echo $recept['level'] ?></p>
+                    </td>
+                    <td>
+                        <p><?php echo $recept['chef'] ?></p>
+                    </td>
+                    <td>
+                        <p><?php echo $recept['taste'] ?></p>
+                    </td>
+                    <td>
+                        <p><?php echo $recept['amount'] ?></p>
+                    </td>
+                    <td>
+                        <p><?php echo $recept['time'] ?></p>
+                    </td>
+                    <td>
+                        <p><?php echo $recept['preparation'] ?></p>
+                    </td>
+
+                </tr>
+        </tbody>
+    </table>
+<?php } ?>
 
 </body>
