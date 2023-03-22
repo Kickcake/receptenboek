@@ -10,6 +10,16 @@ $stmt->execute();
 $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
 $recepten = $stmt->fetchAll();
 ?>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
 
 <body>
     <table class="ja">
@@ -27,34 +37,52 @@ $recepten = $stmt->fetchAll();
         </thead>
         <tbody>
             <?php foreach ($recepten as $recept) { ?>
-                <tr>
-                    <td>
-                        <p><?php echo $recept['id'] ?></p>
-                    </td>
-                    <td>
-                        <p><?php echo $recept['name'] ?></p>
-                    </td>
-                    <td>
-                        <p><?php echo $recept['level'] ?></p>
-                    </td>
-                    <td>
-                        <p><?php echo $recept['chef'] ?></p>
-                    </td>
-                    <td>
-                        <p><?php echo $recept['taste'] ?></p>
-                    </td>
-                    <td>
-                        <p><?php echo $recept['amount'] ?></p>
-                    </td>
-                    <td>
-                        <p><?php echo $recept['time'] ?></p>
-                    </td>
-                    <td>
-                        <p><?php echo $recept['preparation'] ?></p>
-                    </td>
+            <tr>
+                <td>
+                    <p>
+                        <?php echo $recept['id'] ?>
+                    </p>
+                </td>
+                <td>
+                    <p>
+                        <?php echo $recept['name'] ?>
+                    </p>
+                </td>
+                <td>
+                    <p>
+                        <?php echo $recept['level'] ?>
+                    </p>
+                </td>
+                <td>
+                    <p>
+                        <?php echo $recept['chef'] ?>
+                    </p>
+                </td>
+                <td>
+                    <p>
+                        <?php echo $recept['taste'] ?>
+                    </p>
+                </td>
+                <td>
+                    <p>
+                        <?php echo $recept['amount'] ?>
+                    </p>
+                </td>
+                <td>
+                    <p>
+                        <?php echo $recept['time'] ?>
+                    </p>
+                </td>
+                <td>
+                    <p>
+                        <?php echo $recept['preparation'] ?>
+                    </p>
+                </td>
 
-                </tr>
+            </tr>
             <?php } ?>
         </tbody>
     </table>
 </body>
+
+</html>
