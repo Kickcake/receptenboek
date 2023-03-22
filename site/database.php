@@ -1,6 +1,6 @@
 <?php
 $servername = "mariadb";
-$username = "username";
+$username = "user";
 $password = "password";
 
 try {
