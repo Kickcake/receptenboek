@@ -12,7 +12,7 @@ $recepten = $stmt->fetchAll();
 ?>
 
 <body>
-    <table>
+    <table class="ja">
         <thead>
             <tr>
                 <th>id</th>
