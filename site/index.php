@@ -22,6 +22,15 @@ $recepten = $stmt->fetchAll();
 </head>
 
 <body>
+    <div class="recepten">
+        <?php foreach ($recepten as $recept) : ?>
+            <a hred="index.php" class="recept-card">
+                <div class="rtitle"><?php echo $recept['name'] ?></div>
+                <div class="rimg"><img src="<?php echo $recept['image'] ?>"></div>
+                <div class="rlevel"><?php echo $recept['level'] ?></div>
+            </a>
+        <?php endforeach; ?>
+    </div>
     <table class="ja">
         <thead>
             <tr>
@@ -37,49 +46,49 @@ $recepten = $stmt->fetchAll();
         </thead>
         <tbody>
             <?php foreach ($recepten as $recept) { ?>
-            <tr>
-                <td>
-                    <p>
-                        <?php echo $recept['id'] ?>
-                    </p>
-                </td>
-                <td>
-                    <p>
-                        <?php echo $recept['name'] ?>
-                    </p>
-                </td>
-                <td>
-                    <p>
-                        <?php echo $recept['level'] ?>
-                    </p>
-                </td>
-                <td>
-                    <p>
-                        <?php echo $recept['chef'] ?>
-                    </p>
-                </td>
-                <td>
-                    <p>
-                        <?php echo $recept['taste'] ?>
-                    </p>
-                </td>
-                <td>
-                    <p>
-                        <?php echo $recept['amount'] ?>
-                    </p>
-                </td>
-                <td>
-                    <p>
-                        <?php echo $recept['time'] ?>
-                    </p>
-                </td>
-                <td>
-                    <p>
-                        <?php echo $recept['preparation'] ?>
-                    </p>
-                </td>
+                <tr>
+                    <td>
+                        <p>
+                            <?php echo $recept['id'] ?>
+                        </p>
+                    </td>
+                    <td>
+                        <p>
+                            <?php echo $recept['name'] ?>
+                        </p>
+                    </td>
+                    <td>
+                        <p>
+                            <?php echo $recept['level'] ?>
+                        </p>
+                    </td>
+                    <td>
+                        <p>
+                            <?php echo $recept['chef'] ?>
+                        </p>
+                    </td>
+                    <td>
+                        <p>
+                            <?php echo $recept['taste'] ?>
+                        </p>
+                    </td>
+                    <td>
+                        <p>
+                            <?php echo $recept['amount'] ?>
+                        </p>
+                    </td>
+                    <td>
+                        <p>
+                            <?php echo $recept['time'] ?>
+                        </p>
+                    </td>
+                    <td>
+                        <p>
+                            <?php echo $recept['preparation'] ?>
+                        </p>
+                    </td>
 
-            </tr>
+                </tr>
             <?php } ?>
         </tbody>
     </table>
