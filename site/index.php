@@ -1,13 +1,14 @@
 <?php
-require 'database.php';
+require_once 'database.php';
 // Dit is het startpunt van je applicatie.
 
 echo ' Welkom bij het receptenboek';
 
-$conn = mysqli_connect("mysql:host=$servername;dbname=$database", $username, $password);
-$sql = "SELECT * FROM `Recepten`;";
-$result = mysqli_query($conn, $sql);
-$recepten = mysqli_fetch_all($result, MYSQLI_ASSOC)
+$stmt = $conn->prepare("SELECT * FROM `Recepten`;");
+
+$stmt->execute();
+$result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
+$recepten = $stmt->fetchAll();
 ?>
 
 <body>
