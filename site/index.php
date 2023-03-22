@@ -4,7 +4,7 @@ require 'database.php';
 
 echo ' Welkom bij het receptenboek';
 
-$conn = mysqli_connect($servername, $database, $username, $password);
+$conn = mysqli_connect($username, $password);
 $sql = "SELECT * FROM Recepten";
 $result = mysqli_query($conn, $sql);
 $recepten = mysqli_fetch_assoc($result);
