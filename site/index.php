@@ -4,3 +4,4 @@ require 'database.php';
 
 echo ' Welkom bij het receptenboek';
 $sql = "SELECT * FROM `Recepten`;";
+echo $sql;
