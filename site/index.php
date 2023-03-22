@@ -25,9 +25,13 @@ $recepten = $stmt->fetchAll();
     <div class="recepten">
         <?php foreach ($recepten as $recept) : ?>
             <a hred="index.php" class="recept-card">
-                <div class="rtitle"><?php echo $recept['name'] ?></div>
+                <div class="rtitle">
+                    <h1><?php echo $recept['name'] ?></h1>
+                </div>
+                <div class="rlevel">
+                    <p>Niveau: <?php echo $recept['level'] ?></p>
+                </div>
                 <div class="rimg"><img src="<?php echo $recept['image'] ?>"></div>
-                <div class="rlevel"><?php echo $recept['level'] ?></div>
             </a>
         <?php endforeach; ?>
     </div>

@@ -7,3 +7,11 @@ td,
 th {
     border: 1px solid black;
 }
+
+.rtitle h1 {
+    text-align: center;
+}
+
+.rimg img {
+    max-width: 200px;
+}
