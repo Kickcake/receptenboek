@@ -54,8 +54,7 @@ $recepten = $stmt->fetchAll();
                     </td>
 
                 </tr>
+            <?php } ?>
         </tbody>
     </table>
-<?php } ?>
-
 </body>
