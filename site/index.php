@@ -3,6 +3,10 @@ require 'database.php';
 // Dit is het startpunt van je applicatie.
 
 echo ' Welkom bij het receptenboek';
+$servername = "mariadb";
+$database = "receptenboek";
+$username = "user";
+$password = "password";
 
 $conn = mysqli_connect($servername, $database, $username, $password);
 $sql = "SELECT * FROM Recepten";
