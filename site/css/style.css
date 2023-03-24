@@ -95,24 +95,45 @@ th {
 .rlevel {
     position: relative;
     top: 25px;
-    left: -50px;
+    right: 33em;
     min-width: 110%;
     min-height: fit-content;
     align-content: center;
 }
 
 .rgang {
-    max-width: 60px;
+    min-width: 135px;
     position: relative;
     top: 55px;
     left: 210px;
+}
+
+.rpers {
+    min-width: 135px;
+    position: relative;
+    top: 95px;
+    left: 75px;
+}
+
+.rtijd {
+    min-width: 135px;
+    position: relative;
+    top: 135px;
+    left: -60px;
+}
+
+.ring {
+    min-width: 135px;
+    position: relative;
+    top: 175px;
+    left: -195px;
 }
 
 .rtitle {
     position: relative;
     align-content: flex-start;
     min-width: fit-content;
-    right: 460px;
+    right: 945px;
     bottom: 20px;
 }
 

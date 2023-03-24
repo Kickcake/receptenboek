@@ -38,7 +38,16 @@ $recepten = $stmt->fetchAll();
         <?php foreach ($recepten as $recept) : ?>
             <a hred="index.php" class="recept-card">
                 <div class="rgang">
-                    <p>-Gang-<br><?php echo $recept['course'] ?></p>
+                    <p>Gang: <?php echo $recept['course'] ?></p>
+                </div>
+                <div class="rpers">
+                    <p><?php echo $recept['amount'] ?> Personen</p>
+                </div>
+                <div class="rtijd">
+                    <p>Duur: <?php echo $recept['time'] ?></p>
+                </div>
+                <div class="ring">
+                    <p><?php echo $recept['stuff'] ?> ingredienten</p>
                 </div>
                 <div class="rlevel">
                     <p>Niveau: <?php echo $recept['level'] ?></p>
