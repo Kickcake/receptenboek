@@ -6,46 +6,60 @@ bodyd {
 }
 
 html {
-    border: 5px solid black;
-
+    max-height: 769px;
+    background-color: rgb(255, 217, 50);
 }
 
 body {
-    background-color: white;
-
+    max-height: 769px;
+    margin: 0;
 }
 
 header {
-    position: relative;
-    left: 0px;
-    height: 55px;
+    background-color: rgb(255, 213, 0);
+    height: 50pt;
     border: 1px solid black;
     padding-bottom: 2em;
 }
 
 header h1 {
+    text-align: center;
+    font-size: 50pt;
     margin: 0px;
 }
 
 nav {
+    height: 50px;
     display: flex;
+    flex-wrap: wrap;
     border: 1px solid red;
 }
 
 nav a {
     position: relative;
-    left: 110px;
-    padding-right: 1em;
+
+    left: 108px;
+    padding-right: 7em;
+}
+
+footer {
+    position: relative;
+    top: 714px;
+    height: 55px;
+    width: 1690px;
+    background-color: rgb(54, 54, 54);
+    align-self: baseline;
 }
 
 .sideimg {
     position: absolute;
     width: 90px;
-    height: 688px;
+    height: 650px;
     object-fit: cover;
 }
 
 button {
+    position: absolute;
     width: 100px;
     height: 50px;
     border-radius: 5px;
@@ -140,7 +154,9 @@ th {
 .rimg {
     align-self: last baseline;
     position: absolute;
+    height: 202.67px;
 }
+
 
 .rimg img {
     max-width: 200px;

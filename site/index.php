@@ -1,8 +1,5 @@
 <?php
 require_once 'database.php';
-// Dit is het startpunt van je applicatie.
-
-echo ' Welkom bij het receptenboek';
 
 $stmt = $conn->prepare("SELECT * FROM `Recepten`;");
 
@@ -60,6 +57,10 @@ $recepten = $stmt->fetchAll();
             </a>
         <?php endforeach; ?>
     </div>
+    <footer>
+        <p>okokok</p>
+    </footer>
 </body>
+
 
 </html>
