@@ -1,3 +1,64 @@
+bodyd {
+    background-image: linear-gradient(rgba(4, 9, 30, 0.137), rgba(4, 9, 30, 0.7)), url('recipe-by-dall-e.png');
+    background-position: center;
+    background-size: cover;
+    position: relative
+}
+
+html {
+    border: 5px solid black;
+
+}
+
+body {
+    background-color: white;
+
+}
+
+header {
+    position: relative;
+    left: 0px;
+    height: 55px;
+    border: 1px solid black;
+    padding-bottom: 2em;
+}
+
+header h1 {
+    margin: 0px;
+}
+
+nav {
+    display: flex;
+    border: 1px solid red;
+}
+
+nav a {
+    position: relative;
+    left: 110px;
+    padding-right: 1em;
+}
+
+.sideimg {
+    position: absolute;
+    width: 90px;
+    height: 688px;
+    object-fit: cover;
+}
+
+button {
+    width: 100px;
+    height: 50px;
+    border-radius: 5px;
+}
+
+button:hover {
+    background: brown;
+}
+
+button:active {
+    background: rgb(61, 225, 61);
+}
+
 .ja {
     text-align: center;
 }
@@ -8,28 +69,61 @@ th {
     border: 1px solid black;
 }
 
+.recepten {
+    position: absolute;
+    top: 140px;
+    left: 110px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
 .recepten a {
-    border: 1px solid black;
-    width: 600px;
+    background-color: gainsboro;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    border-left: 5px solid black;
+    border-bottom: 5px solid black;
+    border-top: 3px solid rgb(92, 92, 92);
+    border-right: 3px solid rgb(92, 92, 92);
+    border-radius: 5px;
+    width: 371px;
+    height: 270px;
     display: flex;
     flex-direction: row;
 }
 
 .rlevel {
     position: relative;
-    top: 40px;
-    left: 5px;
+    top: 25px;
+    left: -50px;
+    min-width: 110%;
+    min-height: fit-content;
     align-content: center;
+}
+
+.rgang {
+    max-width: 60px;
+    position: relative;
+    top: 55px;
+    left: 210px;
 }
 
 .rtitle {
     position: relative;
-    right: 60px;
+    align-content: flex-start;
+    min-width: fit-content;
+    right: 460px;
+    bottom: 20px;
+}
+
+.rimg {
+    align-self: last baseline;
+    position: absolute;
 }
 
 .rimg img {
     max-width: 200px;
-    position: relative;
-    right: 50px;
-    border: 1px solid black;
+    border-top: 3px solid black;
+    border-right: 3px solid black;
+    border-top-right-radius: 5px;
 }
