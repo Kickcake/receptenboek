@@ -164,3 +164,60 @@ th {
     border-right: 3px solid black;
     border-top-right-radius: 5px;
 }
+
+.recept {
+    position: absolute;
+    top: 150px;
+    left: 110px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.recept a {
+    background-color: gainsboro;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    border-right: 5px solid black;
+    border-bottom: 5px solid black;
+    border-top: 3px solid rgb(92, 92, 92);
+    border-left: 3px solid rgb(92, 92, 92);
+    border-radius: 5px;
+    width: 1515px;
+    height: 650px;
+    display: flex;
+    flex-direction: row;
+}
+
+
+.stitle {
+    height: 50px;
+    font-size: 30pt;
+    position: relative;
+    align-content: flex-start;
+    min-width: fit-content;
+    left: 0.15em;
+    bottom: 63px;
+}
+
+.sinfo {
+    position: relative;
+    align-content: flex-start;
+    min-width: fit-content;
+    right: 20em;
+    top: 64px;
+}
+
+.simg {
+    align-self: center;
+    position: relative;
+    height: 555px;
+    left: 28.6em;
+}
+
+
+.simg img {
+    max-width: 600px;
+    border-top: 3px solid black;
+    border-left: 3px solid black;
+    border-top-left-radius: 5px;
+}
