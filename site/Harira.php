@@ -1,7 +1,7 @@
 <?php
 require_once 'database.php';
 
-$stmt = $conn->prepare("SELECT * FROM `Recepten`;");
+$stmt = $conn->prepare("SELECT * FROM `Recepten` WHERE id = 3;");
 
 $stmt->execute();
 $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
@@ -31,32 +31,35 @@ $recepten = $stmt->fetchAll();
     <div>
         <img class="sideimg" src="images/160626-haal-marokko-in-huis-5-bron-casa-de-valentina.jpg" alt="sideimg">
     </div>
-    <div class="recepten">
-        <?php foreach ($recepten as $recept) : ?>
-            <a href="<?php echo $recept['name'] ?>.php" class="recept-card">
-                <div class="rgang">
-                    <p>Gang: <?php echo $recept['course'] ?></p>
-                </div>
-                <div class="rpers">
-                    <p><?php echo $recept['amount'] ?> Personen</p>
-                </div>
-                <div class="rtijd">
-                    <p>Duur: <?php echo $recept['time'] ?></p>
-                </div>
-                <div class="ring">
-                    <p><?php echo $recept['stuff'] ?> ingredienten</p>
-                </div>
-                <div class="rlevel">
-                    <p>Niveau: <?php echo $recept['level'] ?></p>
-                </div>
-                <div class="rtitle">
-                    <h1><?php echo $recept['name'] ?></h1>
-                </div>
-                <div class="rimg"><img src="<?php echo $recept['image'] ?>"></div>
+    <main>
+        <div class="recept">
+            <?php foreach ($recepten as $recept) : ?>
+                <a href="<?php echo $recept['name'] ?>.php" class="recept-card">
+                    <div class="sgang">
+                        <p>Gang: <?php echo $recept['course'] ?></p>
+                    </div>
+                    <div class="spers">
+                        <p><?php echo $recept['amount'] ?> Personen</p>
+                    </div>
+                    <div class="stijd">
+                        <p>Duur: <?php echo $recept['time'] ?></p>
+                    </div>
+                    <div class="sing">
+                        <p><?php echo $recept['stuff'] ?> ingredienten</p>
+                    </div>
+                    <div class="slevel">
+                        <p>Niveau: <?php echo $recept['level'] ?></p>
+                    </div>
+                    <div class="stitle">
+                        <h1><?php echo $recept['name'] ?></h1>
+                    </div>
+                    <div class="simg"><img src="<?php echo $recept['image'] ?>"></div>
 
-                </>
-            <?php endforeach; ?>
-    </div>
+                    </>
+                <?php endforeach; ?>
+                </a>
+        </div>
+    </main>
     <footer>
         <p>okokok</p>
     </footer>
