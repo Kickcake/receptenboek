@@ -21,7 +21,7 @@ $recepten = $stmt->fetchAll();
 <body>
     <header>
         <h1>Yo website </h1>
-        <nav>
+        <nav class="button">
             <a href="index.php"><button>Home</button></a>
             <a href=""><button>5 eurp</button></a>
             <a href=""><button>5 eurp</button></a>
@@ -29,12 +29,12 @@ $recepten = $stmt->fetchAll();
         </nav>
     </header>
     <div>
-        <img class="sideimg" src="images/160626-haal-marokko-in-huis-5-bron-casa-de-valentina.jpg" alt="sideimg">
+        <img class="sideimg" src="images/barotrauma.gif" alt="sideimg">
     </div>
     <main>
         <div class="recept">
             <?php foreach ($recepten as $recept) : ?>
-                <a href="<?php echo $recept['name'] ?>.php" class="recept-card">
+                <a class="recept-card">
                     <div class="stitle">
                         <h1><?php echo $recept['name'] ?></h1>
                     </div>
@@ -50,10 +50,9 @@ $recepten = $stmt->fetchAll();
                         <img src="<?php echo $recept['image'] ?>">
                     </div>
 
+                </a>
+            <?php endforeach; ?>
         </div>
-    <?php endforeach; ?>
-    </a>
-    </div>
     </main>
     <footer>
         <p>okokok</p>

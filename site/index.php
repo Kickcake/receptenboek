@@ -1,7 +1,25 @@
 <?php
 require_once 'database.php';
-
-$stmt = $conn->prepare("SELECT * FROM `Recepten`;");
+session_start();
+if (empty($_SESSION["sort"])) {
+    $_SESSION["sort"] = "ing";
+}
+if (isset($_SESSION["sort"])) {
+    switch ($_SESSION["sort"]) {
+        case "tijd":
+            $stmt = $conn->prepare("SELECT * FROM `Recepten` ORDER by time ASC;");
+            break;
+        case "niveau":
+            $stmt = $conn->prepare("SELECT * FROM `Recepten` ORDER by level ASC;");
+            break;
+        case "ing":
+            $stmt = $conn->prepare("SELECT * FROM `Recepten` ORDER by stuff ASC;");
+            break;
+        default:
+            $stmt = $conn->prepare("SELECT * FROM `Recepten` ORDER by id ASC;");
+            break;
+    }
+}
 
 $stmt->execute();
 $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
@@ -22,10 +40,12 @@ $recepten = $stmt->fetchAll();
     <header>
         <h1>Yo website </h1>
         <nav>
-            <a href="index.php"><button>Home</button></a>
-            <a href=""><button>5 eurp</button></a>
-            <a href=""><button>5 eurp</button></a>
-            <a href=""><button>5 eurp</button></a>
+            <a href=""><button>tijd <?php session_reset();
+                                    $_SESSION["sort"] = "tijd" ?></button></a>
+            <a href=""><button>ingredienten <?php session_reset();
+                                            $_SESSION["sort"] = "ing" ?></button></a>
+            <a href=""><button>niveau <?php session_reset();
+                                        $_SESSION["sort"] = "niveau" ?></button></a>
         </nav>
     </header>
     <div>
@@ -54,8 +74,8 @@ $recepten = $stmt->fetchAll();
                 </div>
                 <div class="rimg"><img src="<?php echo $recept['image'] ?>"></div>
 
-                </>
-            <?php endforeach; ?>
+            </a>
+        <?php endforeach; ?>
     </div>
     <footer>
         <p>okokok</p>

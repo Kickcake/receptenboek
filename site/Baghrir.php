@@ -21,7 +21,7 @@ $recepten = $stmt->fetchAll();
 <body>
     <header>
         <h1>Yo website </h1>
-        <nav>
+        <nav class="button">
             <a href="index.php"><button>Home</button></a>
             <a href=""><button>5 eurp</button></a>
             <a href=""><button>5 eurp</button></a>
@@ -34,30 +34,24 @@ $recepten = $stmt->fetchAll();
     <main>
         <div class="recept">
             <?php foreach ($recepten as $recept) : ?>
-                <a href="<?php echo $recept['name'] ?>.php" class="recept-card">
-                    <div class="sgang">
-                        <p>Gang: <?php echo $recept['course'] ?></p>
-                    </div>
-                    <div class="spers">
-                        <p><?php echo $recept['amount'] ?> Personen</p>
-                    </div>
-                    <div class="stijd">
-                        <p>Duur: <?php echo $recept['time'] ?></p>
-                    </div>
-                    <div class="sing">
-                        <p><?php echo $recept['stuff'] ?> ingredienten</p>
-                    </div>
-                    <div class="slevel">
-                        <p>Niveau: <?php echo $recept['level'] ?></p>
-                    </div>
+                <a class="recept-card">
                     <div class="stitle">
                         <h1><?php echo $recept['name'] ?></h1>
                     </div>
-                    <div class="simg"><img src="<?php echo $recept['image'] ?>"></div>
+                    <div class="sinfo">
+                        <p>Niveau: <?php echo $recept['level'] ?><br>
+                            Gang: <?php echo $recept['course'] ?><br>
+                            <?php echo $recept['amount'] ?> Personen<br>
+                            Duur: <?php echo $recept['time'] ?><br>
+                            <?php echo $recept['stuff'] ?> ingredienten
+                        </p>
+                    </div>
+                    <div class="simg">
+                        <img src="<?php echo $recept['image'] ?>">
+                    </div>
 
-                    </>
-                <?php endforeach; ?>
                 </a>
+            <?php endforeach; ?>
         </div>
     </main>
     <footer>

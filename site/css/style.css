@@ -18,7 +18,6 @@ body {
 header {
     background-color: rgb(255, 213, 0);
     height: 50pt;
-    border: 1px solid black;
     padding-bottom: 2em;
 }
 
@@ -32,29 +31,30 @@ nav {
     height: 50px;
     display: flex;
     flex-wrap: wrap;
-    border: 1px solid red;
+    background-color: rgb(106, 165, 17);
 }
 
 nav a {
     position: relative;
-
     left: 108px;
     padding-right: 7em;
 }
 
+
 footer {
     position: relative;
-    top: 714px;
-    height: 55px;
+    top: 8px;
+    height: 80px;
     width: 1690px;
     background-color: rgb(54, 54, 54);
     align-self: baseline;
 }
 
 .sideimg {
-    position: absolute;
+    position: relative;
+    bottom: -28px;
     width: 90px;
-    height: 730px;
+    height: 715px;
     object-fit: cover;
 }
 
@@ -167,14 +167,14 @@ th {
 
 .recept {
     position: absolute;
-    top: 150px;
+    top: 140px;
     left: 110px;
     display: flex;
     flex-wrap: wrap;
 }
 
 .recept a {
-    background-color: gainsboro;
+    background-image: linear-gradient(rgb(209, 209, 209), rgb(154, 154, 154));
     margin-right: 5px;
     margin-bottom: 5px;
     border-right: 5px solid black;
@@ -188,21 +188,22 @@ th {
     flex-direction: row;
 }
 
+.stitle h1 {
+    margin: 0px;
+}
 
 .stitle {
-    height: 50px;
+    min-width: 550px;
     font-size: 30pt;
     position: relative;
-    align-content: flex-start;
-    min-width: fit-content;
     left: 0.15em;
-    bottom: 63px;
 }
 
 .sinfo {
+    min-width: 220px;
+    font-size: 20pt;
     position: relative;
     align-content: flex-start;
-    min-width: fit-content;
     right: 20em;
     top: 64px;
 }
@@ -211,7 +212,7 @@ th {
     align-self: center;
     position: relative;
     height: 555px;
-    left: 28.6em;
+    left: 8.9em;
 }
 
 
