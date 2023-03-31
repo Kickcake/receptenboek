@@ -50,5 +50,4 @@ $recepten = $stmt->fetchAll(PDO::FETCH_ASSOC);
     </main>
 </body>
 
-
 </html>
