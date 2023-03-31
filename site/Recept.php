@@ -46,10 +46,8 @@ $recepten = $stmt->fetchAll(PDO::FETCH_ASSOC);
                 </a>
             <?php endforeach; ?>
         </div>
+        <?php include 'compents/footer.php'; ?>
     </main>
-    <footer>
-        <p>okokok</p>
-    </footer>
 </body>
 
 
