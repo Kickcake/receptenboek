@@ -1,11 +1,11 @@
 <?php
 require_once 'database.php';
 session_start();
-if (empty($_SESSION["sort"])) {
-    $_SESSION["sort"] = "ing";
+if (empty($_GET["sort"])) {
+    $_GET["sort"] = "ing";
 }
-if (isset($_SESSION["sort"])) {
-    switch ($_SESSION["sort"]) {
+if (isset($_GET["sort"])) {
+    switch ($_GET["sort"]) {
         case "tijd":
             $stmt = $conn->prepare("SELECT * FROM `Recepten` ORDER by time ASC;");
             break;
@@ -14,6 +14,9 @@ if (isset($_SESSION["sort"])) {
             break;
         case "ing":
             $stmt = $conn->prepare("SELECT * FROM `Recepten` ORDER by stuff ASC;");
+            break;
+        case "id":
+            $stmt = $conn->prepare("SELECT * FROM `Recepten` ORDER by id ASC;");
             break;
         default:
             $stmt = $conn->prepare("SELECT * FROM `Recepten` ORDER by id ASC;");
@@ -37,17 +40,8 @@ $recepten = $stmt->fetchAll();
 </head>
 
 <body>
-    <header>
-        <h1>Yo website </h1>
-        <nav>
-            <a href=""><button>tijd <?php session_reset();
-                                    $_SESSION["sort"] = "tijd" ?></button></a>
-            <a href=""><button>ingredienten <?php session_reset();
-                                            $_SESSION["sort"] = "ing" ?></button></a>
-            <a href=""><button>niveau <?php session_reset();
-                                        $_SESSION["sort"] = "niveau" ?></button></a>
-        </nav>
-    </header>
+    <?php include 'compents/header.php' ?>
+    <?php include 'compents/nav.php' ?>
     <div>
         <img class="sideimg" src="images/160626-haal-marokko-in-huis-5-bron-casa-de-valentina.jpg" alt="sideimg">
     </div>
@@ -77,9 +71,7 @@ $recepten = $stmt->fetchAll();
             </a>
         <?php endforeach; ?>
     </div>
-    <footer>
-        <p>okokok</p>
-    </footer>
+    <?php include 'compents/footer.php'; ?>
 </body>
 
 
