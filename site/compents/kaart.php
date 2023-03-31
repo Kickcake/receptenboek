@@ -11,7 +11,7 @@
                 <p>Duur: <?php echo $recept['time'] ?></p>
             </div>
             <div class="ring">
-                <p><?php echo $recept['stuff'] ?> ingredienten</p>
+                <p><?php echo $recept['ing'] ?> ingredienten</p>
             </div>
             <div class="rlevel">
                 <p>Niveau: <?php echo $recept['level'] ?></p>

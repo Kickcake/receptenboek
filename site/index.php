@@ -13,7 +13,7 @@ if (isset($_GET["sort"])) {
             $stmt = $conn->prepare("SELECT * FROM `Recepten` ORDER by level ASC;");
             break;
         case "ing":
-            $stmt = $conn->prepare("SELECT * FROM `Recepten` ORDER by stuff ASC;");
+            $stmt = $conn->prepare("SELECT * FROM `Recepten` ORDER by ing ASC;");
             break;
         case "id":
             $stmt = $conn->prepare("SELECT * FROM `Recepten` ORDER by id ASC;");

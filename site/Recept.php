@@ -36,7 +36,7 @@ $recepten = $stmt->fetchAll(PDO::FETCH_ASSOC);
                             Gang: <?php echo $recept['course'] ?><br>
                             <?php echo $recept['amount'] ?> Personen<br>
                             Duur: <?php echo $recept['time'] ?><br>
-                            <?php echo $recept['stuff'] ?> ingredienten
+                            <?php echo $recept['ing'] ?> ingredienten
                         </p>
                     </div>
                     <div class="simg">
