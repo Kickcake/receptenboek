@@ -41,6 +41,7 @@ $recepten = $stmt->fetchAll();
 
 <body>
     <?php include 'compents/header.php' ?>
+
     <div>
         <img class="sideimg" src="images/160626-haal-marokko-in-huis-5-bron-casa-de-valentina.jpg" alt="sideimg">
     </div>

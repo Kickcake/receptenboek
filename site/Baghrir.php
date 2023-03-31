@@ -19,15 +19,8 @@ $recepten = $stmt->fetchAll();
 </head>
 
 <body>
-    <header>
-        <h1>Yo website </h1>
-        <nav class="button">
-            <a href="index.php"><button>Home</button></a>
-            <a href=""><button>5 eurp</button></a>
-            <a href=""><button>5 eurp</button></a>
-            <a href=""><button>5 eurp</button></a>
-        </nav>
-    </header>
+    <?php include 'compents/header.php' ?>
+
     <div>
         <img class="sideimg" src="images/160626-haal-marokko-in-huis-5-bron-casa-de-valentina.jpg" alt="sideimg">
     </div>
