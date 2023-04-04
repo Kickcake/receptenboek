@@ -22,7 +22,7 @@ $recepten = $stmt->fetchAll(PDO::FETCH_ASSOC);
     <?php include 'compents/header.php' ?>
 
     <div>
-        <img class="sideimg" src="images/barotrauma.gif" alt="sideimg">
+        <img class="sideimg" src="images/160626-haal-marokko-in-huis-5-bron-casa-de-valentina.jpg" alt="sideimg">
     </div>
     <main>
         <div class="recept">
