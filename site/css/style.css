@@ -16,7 +16,8 @@ body {
 }
 
 header {
-    background-color: rgb(255, 213, 0);
+    background-image: linear-gradient(rgba(4, 9, 30, 0.137), rgba(4, 9, 30, 0.7)), url('de-marokkaanse-keuken-2-1440x600.jpg');
+
     height: 50pt;
     padding-bottom: 2em;
 }
@@ -42,7 +43,7 @@ nav {
     height: 50px;
     display: flex;
     flex-wrap: wrap;
-    background-color: rgb(106, 165, 17);
+    background-color: rgb(126, 192, 27);
 }
 
 nav a {
@@ -79,7 +80,7 @@ footer p {
 }
 
 button {
-    background-color: rgb(221, 255, 68);
+    background-color: rgb(201, 236, 42);
     position: absolute;
     top: 3px;
     width: 100px;
