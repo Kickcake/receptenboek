@@ -1,13 +1,11 @@
 <?php
 require_once 'database.php';
-$sql = "SELECT COUNT(*) FROM Recepten;";
-$res = $conn->query($sql);
-$count = $res->fetchColumn();
+$sql = "SELECT COUNT(*) AS dl FROM Recepten;";
+$recepten = mysqli_query($conn, $sql);
+$count = mysqli_fetch_assoc($recepten);
+$l = ($count['dl']);
 ?>
 <header>
     <h1>ÈPICER</h1>
     <?php include 'compents/nav.php' ?>
-    <div class="count">
-        <p><?php echo $count ?> <br> Recepten sorteren op:</p>
-    </div>
 </header>

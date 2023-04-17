@@ -7,26 +7,24 @@ if (empty($_GET["sort"])) {
 if (isset($_GET["sort"])) {
     switch ($_GET["sort"]) {
         case "tijd":
-            $stmt = $conn->prepare("SELECT * FROM `Recepten` ORDER by time Desc;");
+            $sql = "SELECT * FROM `Recepten` ORDER by time Desc;";
             break;
         case "niveau":
-            $stmt = $conn->prepare("SELECT * FROM `Recepten` ORDER by level ASC;");
+            $sql = "SELECT * FROM `Recepten` ORDER by level ASC;";
             break;
         case "ing":
-            $stmt = $conn->prepare("SELECT * FROM `Recepten` ORDER by ing ASC;");
+            $sql = "SELECT * FROM `Recepten` ORDER by ing ASC;";
             break;
         case "id":
-            $stmt = $conn->prepare("SELECT * FROM `Recepten` ORDER by id ASC;");
+            $sql = "SELECT * FROM `Recepten` ORDER by id ASC;";
             break;
         default:
-            $stmt = $conn->prepare("SELECT * FROM `Recepten` ORDER by id ASC;");
+            $sql = "SELECT * FROM `Recepten` ORDER by id ASC;";
             break;
     }
 }
 
-$stmt->execute();
-$result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
-$recepten = $stmt->fetchAll();
+$recepten = mysqli_query($conn, $sql);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -41,10 +39,6 @@ $recepten = $stmt->fetchAll();
 
 <body>
     <?php include 'compents/header.php' ?>
-
-    <div>
-        <img class="sideimg" src="images/160626-haal-marokko-in-huis-5-bron-casa-de-valentina.jpg" alt="sideimg">
-    </div>
     <?php include 'compents/kaart.php'; ?>
     <?php include 'compents/footer.php'; ?>
 </body>

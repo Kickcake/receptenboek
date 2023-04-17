@@ -1,5 +1,9 @@
 <div class="recepten">
-    <?php foreach ($recepten as $recept) : ?>
+    <?php
+    $sql = "SELECT * FROM Recepten;";
+    $recepten = mysqli_query($conn, $sql);
+    $count = mysqli_fetch_assoc($recepten);
+    foreach ($recepten as $recept) : ?>
         <a href="Recept.php?id=<?php echo $recept['id'] ?>" class="recept-card">
             <div class="rgang">
                 <p>Gang: <?php echo $recept['course'] ?></p>

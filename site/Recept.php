@@ -1,11 +1,9 @@
 <?php
-require_once 'database.php';
-
+require 'database.php';
 $id = $_GET['id'];
-$stmt = $conn->prepare("SELECT * FROM `Recepten` WHERE id = ?");
-$stmt->bindParam(1, $id, PDO::PARAM_INT);
-$stmt->execute();
-$recepten = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+$sql = "SELECT * FROM `recepten` WHERE id = '$id';";
+$tools = mysqli_query($conn, $sql);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -26,7 +24,11 @@ $recepten = $stmt->fetchAll(PDO::FETCH_ASSOC);
     </div>
     <main>
         <div class="recept">
-            <?php foreach ($recepten as $recept) : ?>
+            <?php
+            $sql = "SELECT * FROM Recepten WHERE id = '$id';";
+            $recepten = mysqli_query($conn, $sql);
+            $count = mysqli_fetch_assoc($recepten);
+            foreach ($recepten as $recept) : ?>
                 <a class="recept-card">
                     <div class="stitle">
                         <h1><?php echo $recept['name'] ?></h1>
