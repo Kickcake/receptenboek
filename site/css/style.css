@@ -16,13 +16,16 @@ body {
 }
 
 header {
-    background-image: linear-gradient(rgba(4, 9, 30, 0.137), rgba(4, 9, 30, 0.7)), url('de-marokkaanse-keuken-2-1440x600.jpg');
+    background-image: linear-gradient(rgba(11, 203, 8, 0.683), rgba(11, 203, 8, 0.505)), url('de-marokkaanse-keuken-2-1440x600.jpg');
 
     height: 50pt;
     padding-bottom: 2em;
+    padding-top: 10px;
+
 }
 
 header h1 {
+    color: white;
     text-align: center;
     font-size: 50pt;
     margin: 0px;

@@ -7,7 +7,7 @@ if (empty($_GET["sort"])) {
 if (isset($_GET["sort"])) {
     switch ($_GET["sort"]) {
         case "tijd":
-            $stmt = $conn->prepare("SELECT * FROM `Recepten` ORDER by time ASC;");
+            $stmt = $conn->prepare("SELECT * FROM `Recepten` ORDER by time Desc;");
             break;
         case "niveau":
             $stmt = $conn->prepare("SELECT * FROM `Recepten` ORDER by level ASC;");
