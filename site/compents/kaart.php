@@ -4,7 +4,7 @@
     $recepten = mysqli_query($conn, $sql);
     $count = mysqli_fetch_assoc($recepten);
     foreach ($recepten as $recept) : ?>
-        <a href="Recept.php?id=<?php echo $recept['id'] ?>" class="recept-card">
+        <a href="product.php?id=<?php echo $recept['id'] ?>" class="recept-card">
             <div class="rgang">
                 <p>Gang: <?php echo $recept['course'] ?></p>
             </div>
